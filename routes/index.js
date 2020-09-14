@@ -12,19 +12,19 @@ router.get('/', (req, res) => {
 
 //All Post
 
-router.get('/technology', (req, res) => {
+router.get('/api/technology', (req, res) => {
     Technology.find({}).sort('-date').exec(function (err, posts) { res.json(posts) });
 });
 
-router.get('/farming_methods', (req, res) => {
+router.get('/api/farming_methods', (req, res) => {
     Farming_methods.find({}).sort('-date').exec(function (err, posts) { res.json(posts) });
 });
 
-router.get('/health', (req, res) => {
+router.get('/api/health', (req, res) => {
     Health.find({}).sort('-date').exec(function (err, posts) { res.json(posts) });
 });
 
-router.get('/problems', (req, res) => {
+router.get('/api/problems', (req, res) => {
     Problems.find({}).sort('-date').exec(function (err, posts) { res.json(posts) });
 });
 

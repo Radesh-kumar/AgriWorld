@@ -61,6 +61,9 @@ app.use(passport.session());
 //Routes
 app.use('/', getPostsRouter);
 app.use('/addpost', addPostRouter);
+app.get('*', (req, res) => res.sendFile(path.join(__dirname+'/public/'+'index.html')));
+
+
 
 const PORT = process.env.PORT || 5000;
 
